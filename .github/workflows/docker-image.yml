@@ -34,7 +34,7 @@ jobs:
         
     - name: Push Docker Image
       run: |
-        docker push ghost1975/doocker-graphql:0.0.2 . 
+        docker push ghost1975/doocker-graphql:0.0.2 
 
 
 
