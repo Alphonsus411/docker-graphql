@@ -29,11 +29,12 @@ jobs:
       run: |
         cd graphql-actions
         docker build -t ghost1975/docker-graphql:0.0.2 .
+        docker build -t ghost1975/docker-graphql:latest .
         
     - name: Push Docker Image
       run: |
         docker push ghost1975/docker-graphql:0.0.2
-
+        docker push ghost1975/docker-graphql:latest
     
 #    - name: Build the Docker image
 #       docker build . --file Dockerfile --tag my-image-name:$(date +%s)
