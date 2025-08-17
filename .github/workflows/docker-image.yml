@@ -30,7 +30,7 @@ jobs:
         
     - name: Build Docker Image
       run: |
-        docker build -t ghost1975/doocker-graphql:0.0.2 . 
+        docker build -t ghost1975/docker-graphql:0.0.2 . 
         
     - name: Push Docker Image
       run: |
