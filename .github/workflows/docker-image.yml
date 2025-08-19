@@ -32,16 +32,11 @@ jobs:
 
       - name: Build Docker Images
         run: |
-          docker build -t ghost1975/docker-graphql:${{ steps.version.outputs.version }} .
-          docker build -t ghost1975/docker-graphql:latest .
+          docker build -t ghost1975/docker-graphql:${{ steps.version.outputs.version }} ./graphql-actions
+          docker build -t ghost1975/docker-graphql:latest ./graphql-actions
 
       - name: Push Docker Images
         run: |
           docker push ghost1975/docker-graphql:${{ steps.version.outputs.version }}
           docker push ghost1975/docker-graphql:latest
 
-        
-    
-    
-#    - name: Build the Docker image
-#       docker build . --file Dockerfile --tag my-image-name:$(date +%s)
